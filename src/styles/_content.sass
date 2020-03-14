@@ -1,0 +1,110 @@
+.container
+    padding: $big-gutter * 2 0
+    width: 90%
+    margin: 0 auto
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    .jumbotron
+        text-align: center
+        color: #ffffff
+        margin-bottom: $big-gutter * 1.5
+        &__head-text
+            margin-bottom: $gutter
+            font-weight: $weight-xl
+        &__sub-text
+            font-weight: $weight-sm
+    .form-section
+        .banner
+            background-color: $blue
+            padding: $gutter $gutter * 1.75
+            text-align: center
+            border-radius: 10px
+            margin-bottom: $gutter * 1.5
+            box-shadow: 0 10px 2px 0 rgba(0,0,0,0.2)
+            color: #ffffff
+            &__text
+                font-weight: $weight-xl
+                .thin-txt
+                    font-weight: $weight-sm
+        form
+            background-color: #ffffff
+            border-radius: 10px
+            padding: $gutter
+            box-shadow: 0 10px 2px 0 rgba(0,0,0,0.2)
+            display: flex
+            flex-direction: column
+            .form-area
+                width: 100%
+                input
+                    width: 100%
+                    height: $big-gutter + $gutter
+                    border-radius: 5px
+                    margin: $gutter - 5px auto
+                    padding-left: 15px
+                    border: 1px solid $gry-blue
+                    &::placeholder
+                        font-weight: $weight-xl
+                &__error-txt
+                    color: $red
+                    text-align: right
+                    font-size: 12px
+                    display: none
+                    margin-top: -8px
+                    font-weight: $weight-md
+            .err
+                input
+                    border: 2px solid $red
+                p
+                    display: flex
+                    justify-content: flex-end
+                    align-items: center
+                    svg
+                        transform: scale(.6)
+            .btn
+                cursor: pointer
+                background-color: $green
+                width: 100%
+                height: $big-gutter + 10px
+                border-radius: 10px
+                margin-bottom: $gutter
+                border: none
+                box-shadow: 0 6px 1px 0 hsl(154, 59%, 45%)
+                color: #ffffff
+                font-weight: $weight-md
+                font-size: $gutter
+            .submit-txt
+                text-align: center
+                font-size: 14px
+                color: $gry-blue
+                .red-txt
+                    color: $red
+                    font-weight: $weight-lg
+
+@media screen and (min-width: 768px)
+    .container
+        flex-direction: row
+        align-items: center
+        width: 80%
+        .jumbotron
+            width: 45%
+            text-align: left
+            &__head-text
+                font-size: $big-gutter
+        .form-section
+            width: 50%
+            form
+                padding: $gutter
+                .form-area
+                    text-align: center
+                    input
+                        width: 90%
+                        margin: $gutter - 5px  auto
+                    &__error-txt
+                        padding-right: $gutter + 10px
+                .btn
+                    width: 90%
+                    margin: 0 auto $gutter
+                    text-align: center
+                .submit-txt
+                    font-size: 12px
